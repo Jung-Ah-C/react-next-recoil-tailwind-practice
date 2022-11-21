@@ -1,6 +1,1 @@
-
-export default function Index() {
-  return (
-    <div>test</div>
-  )
-}
+export { default } from "@/features/Todo/pages/Todo";
