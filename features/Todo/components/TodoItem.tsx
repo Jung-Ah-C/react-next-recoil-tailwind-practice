@@ -1,13 +1,19 @@
+import { Todo } from './TodoForm';
 
-const TodoItem: React.FC = () => {
+type TodoProps = {
+    todo: Todo
+}
+
+const TodoItem: React.FC<TodoProps> = ({ todo }) => {
+    const { id, task, isCompleted, datetime } = todo;
     return (
-        <div className="Todo-item">
-            <div>
-                <h3>Doing Homework</h3>
-                <h5>2022.11.18. 17:00</h5>
+        <div className="todo-item-wrapper">
+            <div style={{ width: '50%', float: 'left' }}>
+                <h3>{task}</h3>
+                <h5>{datetime}</h5>
             </div>
-            <div>
-                Check Mark
+            <div style={{ width: '50%', float: 'right' }}>
+                checkmark
             </div>
         </div>
     );
