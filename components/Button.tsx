@@ -1,6 +1,6 @@
 type Button = {
     type?: 'submit' | 'reset' | 'button';
-    text: string;
+    text?: string;
 }
 
 const Button: React.FC<Button> = ({ type, text }) => {

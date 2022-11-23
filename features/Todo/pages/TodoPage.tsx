@@ -1,13 +1,12 @@
 import React from 'react';
 import Clock from "@/features/Clock/components/Clock";
 import TodoForm from '../components/TodoForm';
+import TodoHeader from '../components/TodoHeader';
 
-const Todo: React.FC = () => {
+const TodoPage: React.FC = () => {
     return (
         <div className="todo-wrapper">
-            <header className="todo-header">
-                <h1>Hi! ✋ Catze!</h1>
-            </header>
+            <TodoHeader/>
             <Clock/>
             <TodoForm/>
         </div>
@@ -15,4 +14,4 @@ const Todo: React.FC = () => {
 }
 
 
-export default Todo; 
+export default TodoPage; 
