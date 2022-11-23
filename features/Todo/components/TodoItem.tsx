@@ -1,15 +1,34 @@
+import { Todo } from './TodoForm';
+import Button from '@/components/Button';
+import React, { useCallback, useState } from 'react';
 
-const TodoItem: React.FC = () => {
+interface TodoProps {
+    todo: Todo
+}
+
+
+
+const TodoItem: React.FC<TodoProps> = ({ todo }) => {
+    const { id, task, isCompleted, datetime } = todo;
+    const [buttonState, setButtonState] = useState(isCompleted);
+
+    const handleChange = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
+        event.preventDefault();
+        console.log(todo.isCompleted)
+        todo.isCompleted = !todo.isCompleted;
+        setButtonState(todo.isCompleted);
+    }, [todo]);
+
     return (
-        <div className="Todo-item">
-            <div>
-                <h3>Doing Homework</h3>
-                <h5>2022.11.18. 17:00</h5>
+        <>
+            <div style={{ width: '50%', float: 'left' }}>
+                <span>{task}</span>
+                <time>{datetime}</time>
             </div>
-            <div>
-                Check Mark
+            <div style={{ width: '50%', float: 'right' }}>
+                <button type='button' onClick={handleChange}>{buttonState ? <p>f</p> : <p>e</p> }</button>
             </div>
-        </div>
+        </>
     );
 }
 
