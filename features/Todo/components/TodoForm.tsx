@@ -44,12 +44,18 @@ const TodoForm: React.FC = () => {
     }, [todos, task]);
 
     return (
-        <div className="todo-contents-wrapper">
-            <h4>What Should I do today?</h4>
-            <form onSubmit={handleFormSubmit}>
-                <Input placeholder="Enter your task." value={task} onChange={handleInput}/>
-                <Button type="submit" text="Add"/>
-            </form>
+        <div className="bg-[#FFFFFF] border border-[#DCDCDC] rounded-[4px] flex flex-col p-2.5 gap-2">
+            <div className="bg-[#EFEFEF] flex flex-col p-2 gap-2.5 rounded-[4px]">
+                <span className="text-[14px]">What Should I do today?</span>
+                <form onSubmit={handleFormSubmit} className="flex flex-col gap-2.5">
+                    <div className="p-2">
+                        <Input placeholder="Enter your task." value={task} onChange={handleInput}/>
+                    </div>
+                    <div className="flex justify-end">
+                        <Button type="submit">Add</Button>
+                    </div>
+                </form>
+            </div>
             <TodoList todos={todos}/>
         </div>
     );

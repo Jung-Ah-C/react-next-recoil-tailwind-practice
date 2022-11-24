@@ -12,8 +12,8 @@ const Clock: React.FC = () => {
     }, []);
 
     return (
-        <div className="clock-wrapper">
-            <h2>{dateState} {timeState}</h2>
+        <div className="h-[42px] bg-[#EFEFEF] border border-[#DCDCDC] hover:bg-[#F0F3FF] flex items-center gap-2.5 p-2 rounded-[4px]">
+            <strong className="text-[20px]">{dateState} {timeState}</strong>
         </div>
     );
 }

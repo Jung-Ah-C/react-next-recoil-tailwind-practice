@@ -5,13 +5,12 @@ import TodoHeader from '../components/TodoHeader';
 
 const TodoPage: React.FC = () => {
     return (
-        <div className="todo-wrapper">
+        <div className="flex flex-col justify-center items-center h-screen w-min-[300px]">
             <TodoHeader/>
             <Clock/>
             <TodoForm/>
         </div>
     );
 }
-
 
 export default TodoPage; 

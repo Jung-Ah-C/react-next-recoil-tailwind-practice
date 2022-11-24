@@ -1,13 +1,10 @@
+import { ComponentPropsWithRef } from "react";
 
-type Input = {
-    placeholder: string;
-    onChange: React.ChangeEvent<HTMLInputElement> | any;
-    value: string;
-}
+type InputProps = ComponentPropsWithRef<'input'>;
 
-const Input: React.FC<Input> = ({placeholder, onChange, value}) => {
+const Input: React.FC<InputProps> = ({className, ...props}) => {
     return (
-        <input type="text" placeholder={placeholder} value={value} onChange={onChange}></input>
+        <input {...props} className="w-full mt-1 px-3 py-2 bg-white border shadow-sm border-slate-300 placeholder-slate-400 focus:outline-none focus:[#577CFF] focus:[#577CFF] rounded-[4px] focus:ring-1" type="text"></input>
     );
 }
 
