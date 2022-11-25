@@ -1,11 +1,10 @@
-type Button = {
-    type?: 'submit' | 'reset' | 'button';
-    text?: string;
-}
+import { ComponentProps } from "react";
 
-const Button: React.FC<Button> = ({ type, text }) => {
+type ButtonProps = ComponentProps<'button'>;
+
+const Button: React.FC<ButtonProps> = ({...props}) => {
     return (
-        <button type={type}>{text}</button>
+        <button className="rounded-[4px] bg-[#87A1FF] hover:bg-[#577CFF] text-[#FFFFFF] text-[12px] w-[80px] h-[24px]" {...props}></button>
     );
 }
 

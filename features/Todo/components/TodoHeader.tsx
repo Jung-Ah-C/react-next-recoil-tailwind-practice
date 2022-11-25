@@ -2,9 +2,11 @@ import React from "react";
 
 const TodoHeader: React.FC = () => {
     return (
-        <header className="todo-header">
-            <h1>Hi! ✋ Catze!</h1>
-        </header>
+        <div className="flex items-center py-1 gap-2.5 h-[84px] text-left">
+            <header>
+                <strong className="text-[32px]">Hi! ✋ Catze!</strong>
+            </header>
+        </div>
     );
 }
 

@@ -7,13 +7,15 @@ interface Todos {
 
 const TodoList: React.FC<Todos> = ({ todos }) => {
     return (
-        <ul>
-            {todos.map((todo) => (
-                <li key={todo.id}>
-                    <TodoItem todo={todo}/>
-                </li>
-            ))}
-        </ul>
+        <div className="overflow-y-auto h-[289px]">
+            <ul className="flex flex-col gap-2">
+                {todos.map((todo) => (
+                    <li key={todo.id}>
+                        <TodoItem todo={todo}/>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
