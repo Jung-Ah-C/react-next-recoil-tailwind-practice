@@ -30,7 +30,7 @@ const TodoItem: React.FC<TodoProps> = ({ todo }) => {
             <div className="flex items-center justify-center gap-2.5 p-[1px] w-[44px]">
                 <Button className="bg-white" type="button" onClick={handleChange}>{buttonState ? <FilledCheckCircleIcon className="w-[24px] h-[24px] stroke-white fill-[#24C73E]"/> : <CheckCircleIcon className="w-[24px] h-[24px] stroke-[#0F172A]"/>}</Button>
             </div>
-        </div>
+        </>
     );
 }
 
