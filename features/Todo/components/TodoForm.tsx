@@ -48,7 +48,7 @@ const TodoForm: React.FC = () => {
             <div className="bg-[#EFEFEF] flex flex-col p-2 gap-2.5 rounded-[4px]">
                 <span className="text-[14px]">What Should I do today?</span>
                 <form onSubmit={handleFormSubmit} className="flex flex-col gap-2.5">
-                    <div className="p-2">
+                    <div className="p-2 gap-2.5">
                         <Input placeholder="Enter your task." value={task} onChange={handleInput}/>
                     </div>
                     <div className="flex justify-end">
